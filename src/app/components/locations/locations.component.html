@@ -1,0 +1,24 @@
+<h1 class="mx-4 my-4">Rick y Morty API</h1>
+<div class="container" style="max-width: 800px;">
+  <div class="card shadow">
+    <div class="card-body">
+      <h3 class="card-title text-center">🏢 Locaciones</h3>
+      <table class="table table-sm table-striped table-hover table-bordered align-middle">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="text-center">ℹ️ Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of DataSourceLocations">
+            <td class="text-center">
+              <a class="btn btn-primary me-3" [routerLink]="['/characters', x.id]">Ver personajes</a>
+            </td>
+            <td class="text-center">{{x.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
